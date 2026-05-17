@@ -1,0 +1,60 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installed packages
+.cache
+.local
+profile.out
+benchmark_data/
+
+
+# -- Environments
+.env
+.envrc
+.venv*
+env/
+env.d/*
+!env.d/*-example
+
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+.ruff_cache/
+
+.todo*
+.pre-commit-cache/
+
+# Data
+*.csv
+.coverage
+
+# VSCode - opt-in for shared configs, ignore private configs
+.vscode/**
+!.vscode/settings.json
+!.vscode/extensions.json
