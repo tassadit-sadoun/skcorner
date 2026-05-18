@@ -120,8 +120,14 @@ python src/skillcorner/app/main.py data.log --multiprocess
 
 A helper script can be used to generate large input files for performance testing:
 bash
-
+```bash
 python scripts/generate_big_file.py
+```
+Then:
+
+```bash
+python src/skillcorner/app/main.py huge_data.log
+```
 ---
 
 
