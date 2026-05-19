@@ -7,6 +7,8 @@ from typing import TextIO
 from skillcorner.application.line_processor import ILineProcessor
 from skillcorner.domain.entities import LineResult
 
+logger = logging.getLogger(__name__)
+
 ProcessFn = Callable[[tuple[int, str]], LineResult]
 
 
@@ -22,9 +24,6 @@ def process_line(
 
     except Exception:
         return LineResult(i, "ERROR_PROCESSING_LINE")
-
-
-logger = logging.getLogger(__name__)
 
 
 class StreamingExecutor:
