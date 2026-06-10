@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 set -e
 
-echo "Starting job..."
+export PYTHONPATH=src
 
-python -m skillcorner.app.main data.log
+python -m skillcorner.app.main  data.log
