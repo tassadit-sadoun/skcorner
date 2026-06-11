@@ -18,8 +18,7 @@ jobs:
   # BUILD
   # ==========================================================
 
-  
- check-changes:
+  check-changes:
     runs-on: ubuntu-latest
     outputs:
       relevant: ${{ steps.filter.outputs.relevant }}
