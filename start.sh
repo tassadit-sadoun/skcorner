@@ -5,4 +5,4 @@ export PYTHONPATH=src
 
 pip install .
 
-python -m skillcorner.app.main
+python -m skillcorner.app.main  data.log
