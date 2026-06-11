@@ -121,3 +121,19 @@ jobs:
   # Deploy
   # ==========================================================
 
+deploy-skillcorner:
+  needs: [check-changes, lint, test]
+  if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.check-changes.outputs.relevant == 'true'
+  runs-on: ubuntu-latest
+  environment: production
+  permissions:
+    contents: write
+
+  steps:
+    - uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+
+    - uses: ./.github/actions/scalingo-deploy
+      with:
+        branch: master
